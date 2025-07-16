@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>パスワード判定ツール</title>
+
   <style>
     body {
       background-color: #1b1b1b;
@@ -55,6 +56,111 @@
 </head>
 <body>
   <h1>🔐 パスワードチャレンジ</h1>
+  <!--
+  ちょっと！直接答えを見ようとしましたね！
+  簡単なページなんだから答えを埋め込み式にしてるんです！
+  見ないで変態！！！
+                                                                                 `  `  `
+                                                                           `  ` ` ` ``  ` `
+                                                                              ..JgmNNNNa&.   `
+                                                                       `  ` .gMM9TCzzzvTMMNe. `
+                                                                        ` .MM81?====??=?1zTMN,    `   `
+                                                        `            `   (M#1???==?===??=?=zMNp  `   `  `
+                                                                    `  `.M#I==??jQgex=?=???=zMM[   `      ``  `  `
+                                           `                            dM0=?===?1=zUkz=???==dMMMMNNaJ..`
+                                                                   `` `.MNZ==?=?=?===dR?====?dR~~~_<?TWMNmJ.  `  `
+                                                        `   `         .gMMH===??===?1dD?=?===db~~~~~~~~~_?TMNg, ` `    `
+                             `                                ` `` .iMB=~_Wmz=?===?1dKI=???==d3~~~~~~~~~~~~__7TNm,  ``   `
+                                           `                `   .(MB=~~~~~_7HmQaggQd81?=====dC_~~.~.~~_(.~~~~~~_7MN+.
+                                                        `  ` `.gM8!~~~~~~~~~~~<<<d9C??===1dV>(QgJ-(JJgk#=~~~~~~~~~?WN+.` `  `
+                                                      `     .(M8<~~~~~~.~~~~~(JgW6?=zzuAVY!~~~_<?777<<~~~(JJ-~~.~~~~?HN+  `    `
+                                                        ` `.d#=~~~._~~.~~~~-jMNyWwW9T=<~~~~~~~~~~~~~~~~_(MMM#<~~~~~~~_?MR.
+                             `             `          ` ` (M9~~~_(J-____-(gH8<~~~~~~~~~~~~~..~~.~~~~~.(dMMN#>~~~~.~~~~~?WN,`` `
+                                                        .dM$~~~~~??TYUYYYT>~~~~~~~~~~~~~.~~.~.~~.~~~(gMMMMY~~~.~~~.~~.~~_VN+ `  `
+                                                  `` ``.dMC~~~~_jNma.~_~~~~~~~.~.~...~..~~.~~~~~~.(jMMMM@<~~~~~.~.~~~~~~~_ZNe
+                             `             `        `  d#C~_~~~_dMMMMNm+_~~~.~~~~.~~~.~~.~~~~~~~_(MMMM#=~~~~~.~~~~.~~~~~.~~vMe     `  `
+                                                      jM3_~~~.~~~_?TMMMMNm._~~~~~~~~~.~~.~.~~.~(dMMMM9~~~~~_~~~~~~~.~..~~~~_dN|` `  `  ` `
+                                                    `.MD~~~~.~~~~~~~~?TMMMMNmJ-.~~.~~~.~~.~~~(jMMMMMNNNNNNMNNNNNNNN2~~~~.~~~(MN-.(((-..   ` `
+                                                  `  d#>~~~~~.~..~~~~~~~_7TMMMMNg._~.~~.~~._(WMMMMMMMMMMMMMNMMMMMMMD~~~.~~~~.jMMBT777THH,.   `
+                             `             `       `.MD~~.~.~~~~~~.~~.~~~(JgMMMMMMB<~~~~.~~~.~~~~~~~~~~~~<<<<<~~~~~~~~.~~.~~~(H:~~~~~~~?HR.`
+                                                    (M{~~~.~.~~.~.~_(JugMMMMMMBY=~~~~.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.~~.~~~.~~dI~~~~.~~~(Mb
+                                               `    d#<~~~~~~~~(JgNMMMMMMB=!~~~~~~~~~.~.~~.~~~~~~~_~~__~~~~~~~~~~~.~~.~~.~~~~~(R~~~~~~~~.d#_   `  `    ` `` ` `` `` `  `  ` `  ` ` `` `` ```
+                             `          `        `  M@~~~.~~~~_WMMMMBY>~~~~~~~~~~~~~~~~~.~~~~~(((+Z7Y77uo-~~~~~~~~~.~~~~~~.~~~(W_~.~~~.~-d#`  `    ` `  ` `     ........................((J,`
+                                          ```   ....Mb-~.~..~~~_?<<~~~~~~~~~(((++J+J(JJJJ+gsVY"?!   W-  .X&__--((((((((((JJJJJ+Qa++++&gggMNggggggmQmQWHHHHHMHWHHMHYYBYYYYBYYYYYYY"""YYY""YMr
+                                             .jMMBYWMD_~~~~~.~~~~~~~~~~~~-+v<`.2     (r   dQQQHHHHMMMMHMMMHHHWHMMBYYY"YYY""""""""""""""7?!````         `                                  Mr
+                                        `  .d#=~~~~~(R_~~.~~.~~~~.~~~.~.(C` ` ($     .D   W}     `             `                                                                         .M$
+                             `           `.d@~~~~~~~_X:~~~~~~.~.~~.~~~~(2     ,r `    W_  dr                                                                                              MD`
+                                         `(N>~~.~..~~dr~~~.~~.~.~.~~~~~J{  `  (r      d-..dr          `           `  `        `   `                                                       MP
+                                        ` JNc~~~.~~~~(W-~~~~~~.~~.~.~~~(WT9YYTWB"<?7?7WY??W]      `         `  `          `  `       ` `  `  `         `  `    ``  `  `     `             MP
+                             `        `  `.WN-~~~.~~~_vI~~.~~.~~.~.~~.~~vn    (r      J}  d]   `   ` `  ` `           `  `   `  `  `      `  `      `      `  `   ` `  `  `    `          Mb
+                                         ` .HNc~.~~.~~~~~~~~.~.~~.~~.~~~~(4,  -D`   ` (r  dF  `  ``  ..........`` ``  ``    ` ` ..         `.(-....  ` `     `  `(AA+`  `` `  `           Mb
+                                 `  `    .HB=~~~_~~~~~~.(J-~~~~~.~~.~~.~~~~?1(.R   `  ($` dF      (kWWWfffWWppWn-`  `  .dfk_   jffI ` `  `  (WppbppWk&-.` ` `  . (ff$ `..+AA-  `          Mb    ` `
+                                     `  (#=~~_(+XUUWA+_~~?W+~~~~.~~.~.~.~.~~~~?7TCOTzOOVtOWb `  ` Jfp0_`.   (pfpl`    `.XpR~`` (ppI  `    ` ._~??77TUWU:   ` .dWnjpp$.JXppppr`       `    Mb
+                             `         d#:~_(X=<:~~:~?4x~~(W/~~~~.~~.~~~.~~.~~~~~~~~~~~~~_db   `  dppWXUUUUUUpppl` ` ..(Xpk&JJJdppkAAA-``  dfp$   ...... `  ` ?WfpppkXpWYWpp$`          ` MN+-..   `
+                                   `  .Mt~~(K<:~::::~:~d2~~(R_.~~~.~~.~.~~.~~.~~~~~~~~~~~_dP     .dpfk-.....(WpW{    dWWppWUUUUUWpXUVY! ``(fppkwWpfpppppkA.`    ?WppWf=` dppl  `        ` MMYYHNe.`
+                                     `JN>~~J$:~~~~~:~~~(K~~(Mm-~~~~.~~.~~.~~.~~.~..~.~.~.~dP `  `.XppS7??<<<jWpp{` ``  .XpS_ ``.Xp$       JppfWY77!~`_?WppR.  .JWppK:`   dfpl `       ` `(D~~~~dM2
+                                  `   (M[_~?R_:::~:~::_dD.~(MMN&_~~~.~~.~.~.~~.~.~~.~~~~~~dP    `.dppk-.....JWfW{ `    .Wf$ .dkWppC   ``  d9Y!       ``(ppW:`.XpppWR~    dfp%`          .d>~~~~(MN-`
+                             `       ` db_~~?k.~:::~:(JY~__dM=?MN+_~~~~.~~.~.~~.~~~~~~~.__db`  `  7UWfWY74ppp0=! ``    .XW$  ?TYY!` ``  `        ` ` .(Xpf$`  ?TWppR_ `  dppk&+.  `    `.H~~~~~(MM)
+                                     ` .Wm-~~_7UAaadVY<~_(dM=   TMNe-~~~~~~~~.~~~~~~(+dYYYTb`  `  .dpp0!`(WpWC .dWs `` .XpWAJJJJ++wQl  `    ``    ` .XppW$`    `(WpR_` ` jWpfWW{       `(K~~~~~(MM\
+                                       ` TNe-~~~___~~~~((M@!` ` ..JMNm._~~.~~~~~.~(dY~~~~_(R   `.dppWf!` (WppkAdWpR   ` ?WWWWWWWWWWU3               `_7Y!`  `    7UY`    ` ``` `       `JR~~~.~(M#!
+                                      `  `-7MNgJ--((JigMB=  .(kMBT777<?TX+-~~~~~~(H<~~(+Z7<7G,   ?TY!    .7UUUUUUUC       `   ` `   ` `                      `     `  `               ` .H-~~~~(M$
+                             `              ` ?""""""^`   .dB>~~~~~~~~~~~?74k&--(d$_~~_~~~~~_O;     `     ``  ` ` ` `                                `  `     `  `      `    `          `(W+__(M@`
+                                                      `  .M3~~~~~~.~..~.~~~~~_<?TM<~~~~~~~~~~(r` `      `            `                 `  `            `  `  `      `     `   `    `     `.MNNMD`  `
+                                                       `.Ml~~~~.~~~~.~~~.~~~~~~~~~~~~~~~~~~~~j$             `  `  `   ` ` ` `  ` `` `      ` `      `    `  `   `           `  `  `  `     MP~`
+                             `                          J#~~~~.~..~.~~.~...~.~~~~~~.~..~~.~~_d\              ` ` ` `  `  `   ` ``  ` `  `   `   `     `   ``   `         `  `              MP
+                                                      ` J#_~~~~~~~.~~.~~~~~.~~.~~~~~~~~.~~~_Jt       `  ` `  .J,  ` .J-.     ` .+A+.   `  ...  `     ` `.uA&-`   `  `  `  `   (WpZ.        MP
+                                           `           `.Ml~~.~~~.~~.~~.~.~~.~..~.~~.~~~~~(k=         `  ` .(WpR+J- vWppk..`` .dfpf!`   ` dpp2    `    ` dppn----..`          dpp$```      MP
+                                                         ?Nx~~~.~~~~~~~~~~~~~~~~~~~~~~~~(JXN``   `     `.dfpppfpWU> `-?UWf!` `(Wpk!  `   `(WpR_ `     `  (ppppWWWWC` `   ` ` .dpW{         db
+                             `                           `?Hm.~~~~.~.~.~~.~~~~~~~._((JdUC?dN_        `   77Wppf`   `(kkl  `   dfpC    `  ` dfW{` ` `    `.WpW>          `   `.XpS!         db
+                                           `                ?TNg+(---((((--(((J+yUVCz1????dN_           ` .dpX!  ...(Xpk-. `  dfp{    ` `  dppI    `` .J++XppnJ..   ` `      (Wpf``  `     d@
+                                                      `  `  ` .MK1zOOOOCCCOz1?????????????dN_        `` ` (pp$.JXpppppppppk_  dpWoJXk+    `(Wpk.  ` (XpWUWWppfpppk&.     ` ` (T0! `        d#  `
+                             `                             ` .M@1??????????????????=?==?=?dN~ `          .XWD~dpf!!??XfVTU=   dpppppK>   ` (ppW~ ` jpWC`` jfpC?7UWS!`       `.-.      `    d#
+                                                          ` .M#I???=???????=????1uaQQQmA&zdN_              !`.Xps.  (WpC    ` jpfppS!  `   (TT=`   jppn-.JXpW{`  _`  ` `  `  wW9`    `     d#
+                                           `          ` `` .M#I???????????=?==udHU0vvvrzXWMM{  `              ?WpWWXWW3` `     OWpY! `  `     ``    ?UWWppWU=            `   `             d#.
+                                                       `  (MB1=?????????????uX9vvzvvvvvvvvdM} `             `   ?777!`  `       ``    `          `   ` ```  `              `               J#. `
+                             `                    `  ` `.gM$???=???????????jWSvzvvvvvvvvvrXM:`        `       `  `    `    `               `                 `  `           `            ` J#_
+                                           `   `   `` `.d#0??????????????=1dSzvvvrvrrrrvrvXM{                                                                                              (N~
+                                                `     .MB1?????????????=??jWkzvvvvrrvrrvvrXM{      `    `                           `  `      `   `                `     `                 (N_ `
+                             `                     ` (MD??????????????=???zWkvvvvrrvrvrrvvXM}`` `   ` `  ` ``  `    `  `` `` ``  ` `  `` ````` ``` ` `        ............................(JM{
+                                               ` ` .dM6?????????????????=??dHvvrvvvrvvvvvvXMn......((((JJJJJ++&&&&&gggggggggggmmmmmQQkHHHMMMMMMMMMMMMMMMMMMMMHHHBBYYYYYY9YYY""TYYYYY"""""""""`
+                                           `    ` .M@z??????????????????=??=WkwwvvrvvvvvvvXWHMB9TTTUTTTOTVTTOCCOOOOX@??!~~````                            ``
+                                               `.jMHHy=??=?????=???????=?????vWkwvvvvvvvvvwX9C?=????????????=?????dM$                                                      `
+                             `          `   ` `.dMWZXUHs=???==??=???????????=?=vTHWQmmQQWB91????????????????=???=jWN! `
+                                         ` `  .HMWZZZZZWWksz????=??=???????????????1z1z1?????????????==?==???=?jdWWD
+                                            .+MHZZuZZZZZZZXWWkAe&z=??==???=????=??=???==??????=??===??????1zuQWWWX#:
+                             `         `` `.dMWZZZZZuuZZuZZZZZZZWWHWkmA&zz====?==???=????==??=?=?=1zu&aAQWHWWZuZXMt `
+                                 ` `    ` (MHZZZZZZZZuZZZuZuZZZZZZZZZZZWWWHHHHpWHpWWWkkkkkkkHHHHWWWWWUXZZZZZZZXWMD   `
+                                     ` `.dMSZZZZuuZuZZuuZuuZuZuZZuZZuZZuZZZZZZXMHZZZZZZZZZZZZZZZZZZZZZZZZZZZZXNM=
+                                  `   .(MHZZZZZuZZZZuZZZuZZuZZZuZZZZuZZuZuZZZuWMZZZZuuZZuZuZuZZuZZuZZZZZZZZXWMB!``  `
+                             `   `   .MMWZuZZZuZZuZZZuZuZZuZZuZZuZuZZuZZuZZZZXHWZuuZuZuZZZZuZZZZuZuZXkWqHHHMMMMMmJ.    `
+                           `    `  .dMHZZZZZZuZZuZuZZZuZZuZZuZZuZZuZZuZuZuZuZW#ZZZZZZZZuZuZZuZuZZZZZZZuZZZZZZZZXWMMN+.` `
+                              ` ` .MMWZZZZZuZZuZZZZuZZZZuZZuZZuZZuZZuZuZuZZZXMSZZZZuZuZZuZZuZZuZZuZZZZZuZZuuZZZZZZZWMR.`
+                          ` ``  .dMUZZZZZuZZuZZuZuZZuuZuZZuZZuZZuZZuZuZZuZZXHHuZZuZZuZZuZZuZZuZZuZuZuZuZuuZZuZuZZZZZXHN+ ` `
+                        `     .(MMZZZZZZZZuZZuZZuZZuZZZZuZZZuZZuZZuZZZuZZZZXNXZZZZuZZZuZZuZZuZZuZZZuZZZZZZZuZZZZZuZZZXMN.`
+                        ` `  .HMWZZZZZuZuZZuZZuZZZuZZuZZZuZZuZZZuZZuZZuZZuXMHZZZuZZuZZuZZZuZZZuZZuZZuZuZuZZuZuuuZuZuZZWM[
+                    `    ` .dMHZZZZZZuZZuZZZuZZuZZZuZZuZuZZuZZZZZuZZuZZuZZWMZZZuZZZZZuZZuZZZZZZuZZuZZuZZuZZZZuZZuZZuZZWMD
+                     `  `.dMHXZZZuZuZZZuZZuZZuZZuZZuZZuZZuZZuZuZZZZZZuZZZXMSZZZZZZuZZZuZZuZZZZZuZZZuZZZuZZuZZuZZuZuZZuWM}
+             ` ` ` `  `.(MMZZZZuZZuZuZuZZuZZuZZuZZuZZuZZZZZZZZXXXQQQQQQQQHNQQQQkkkQQQQQQkkkkXZZZZuZZuZZuZZuZuZZuZZZZZXM@`
+                  ` `.(MMWZZZuZZuZZZZuZZuZZuZZuZZuZZuZZZZZXQHMHBY""""""""YY"""YYYYYYYYYYYYYMMWZZZZuuZZuZZuZZZuZZuZZZXMM> `
+              ` ``..gMHWZZZZZZuZZuZuZZZuZZuZZuZZZZZZZZXQHMY!`                           `.+MHZZZZZuZuZZuZZuZZuZZZZZXM#'     `
+       `  `  `` .gMMWZZZZZZZuZZuZZuZZuZZuZZZuZZZZZuXQHMY!     `        `  `    `    `   .MMWZZZZZuZZuZZZuZZuZZZZZXNMD`  `  `
+         ` ` .jMMWuZZuZZuZuZZuZZuZZZuZZuZZuZZuZuXXNM9!    `                          ` +MMZZZZuuZuZuZuuZuZuZZZXQNMNa-..  `
+        `  .gMMWZZZuZZuZZuZZuZZuZZuZZuZZZZZZZZXQH#=`                             `    (MHZZZZZZuZZuZuZZuZuZZUWHHWHHMMMMNm,
+       ` .dMHZZZZZZuZZuZZZZuZZuZZuZZuZZuZZZXXWMB^`                    `           ` `.MHZZZZZZZuZuZuZuZuZuZZZZZZZZZZZZZXWMm `
+     ` .dMHZZZZZuZuZZuZZuZuZZuZZuZuZZZZZZZXMMY`       `                              .MHZZZZuZuZZZZZZZuZZZuZZuZuZZuZZZZZZWN:`  `
+     `.dMWZZZZZZZuZZuZuuZuZuZuZuZZZZZZZXXNM=                                     `    qNkZuZZuZZuZuZuZZZZuZZuZZZZZZZZZZXqM@`
+      d#UZZZZZuZZZZuZZuZZuZZuZZZuZZZZXqM@!                                             (TMmkkZZZZZZuZZZZZZZZZZZuZZZZZXqMMY` `
+    ` dNkZZZZZZZuZZZZZZZZZZuZZZZZZXQHMY`     `                        `             `     ?TWMMNQQQQQQQQQQQkQQkkkXQQMMB= `
+      .TNkZZZZZZZZZZZZZZZZZZZXXQHMB=!     `             `                                 `   ` `??""""""""TYYYYY""7!`  `
+     ` `?WMHQQQQQQQQQQHHNNHMMH9=!      `
+          ` _!~~~```````````
+                             `      `                                 `                                     `
+                                                        `
+                                           `
+                                                                      `                               `
+                             `
+                                                        `
+  -->
   <p>正しいパスワードを入力してください</p>
 
   <input type="text" id="passwordInput" placeholder="ここに入力">
