@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>パスワード判定ツール</title>
+  <style>
+    body {
+      background-color: #1b1b1b;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #4fc3f7;
+    }
+
+    input[type="text"] {
+      padding: 0.6rem;
+      font-size: 1rem;
+      width: 300px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 1rem;
+      background: #2a2e3a;
+      color: #fff;
+    }
+
+    button {
+      padding: 0.6rem 1.2rem;
+      margin-left: 0.5rem;
+      background: #4fc3f7;
+      color: #000;
+      border: none;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .success {
+      color: #4caf50;
+    }
+
+    .fail {
+      color: #f44336;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 パスワードチャレンジ</h1>
+  <p>正しいパスワードを入力してください</p>
+
+  <input type="text" id="passwordInput" placeholder="ここに入力">
+  <button onclick="checkPassword()">送信</button>
+
+  <div id="result"></div>
+
+  <script>
+    const correctPassword = "3609";
+
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const resultDiv = document.getElementById("result");
+
+      if (input === correctPassword) {
+        resultDiv.innerHTML = "🎉 正解です！おめでとう！";
+        resultDiv.className = "success";
+      } else {
+        resultDiv.innerHTML = "❌ 違います！もう一度試してね。";
+        resultDiv.className = "fail";
+      }
+    }
+  </script>
+</body>
+</html>
